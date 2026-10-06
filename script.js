@@ -55,7 +55,7 @@ searchBtn.addEventListener("click", async () => {
        movieCard.classList.add("movie-card");
 
        movieCard.innerHTML = `
-    <img src="${details.Poster !== "N/A" ? details.Poster : "placeholder.jpg"}" alt="${details.Title}">
+    <img src="${details.Poster && details.Poster !== "N/A" ? details.Poster : "placeholder.jpg"}" onerror="this.src='placeholder.jpg'" alt="${details.Title}">
     
     <div class="movie-info">
     <h2>${details.Title}</h2>
